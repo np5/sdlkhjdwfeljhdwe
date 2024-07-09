@@ -65,7 +65,7 @@ jobs:
             exit 1
           else
             echo "YOLO 3 exitcode=$exitcode"
-            ech "YOLO 4 $GITHUB_OUTPUT"
+            echo "YOLO 4 $GITHUB_OUTPUT"
             exit 0
           fi
         env:
