@@ -56,12 +56,16 @@ jobs:
           export exitcode=0
           terraform plan -detailed-exitcode -no-color -out tfplan || export exitcode=$?
 
+          echo "YOLO 1 exitcode=$exitcode"
           echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
-
+          echo "YOLO 2 exitcode=$exitcode"
+          
           if [ $exitcode -eq 1 ]; then
             echo Terraform Plan Failed!
             exit 1
           else
+            echo "YOLO 3 exitcode=$exitcode"
+            ech "YOLO 4 $GITHUB_OUTPUT"
             exit 0
           fi
         env:
