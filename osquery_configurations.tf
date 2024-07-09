@@ -1,5 +1,5 @@
 resource "zentral_osquery_configuration" "default" {
-  name               = "Default"
+  name               = "Default 😛"
   inventory_apps     = true
   inventory_interval = 14400
 }
