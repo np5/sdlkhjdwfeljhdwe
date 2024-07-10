@@ -56,6 +56,9 @@ jobs:
           export exitco=0
           terraform plan -detailed-exitcode -no-color -out tfplan || export exitco=$?
 
+          terraform plan -detailed-exitcode -no-color -out tfplan
+          echo "UUUUUUU $? OOOOOOOOOO"
+
           echo "YOLO 1 exitcode=$exitcode"
           echo "exitcode=$exitco" >> $GITHUB_OUTPUT
           echo "exitcodzzzze=$exitco" >> $GITHUB_OUTPUT
