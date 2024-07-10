@@ -75,6 +75,7 @@ jobs:
             exit 0
           fi
         env:
+          TF_LOG: DEBUG
           TF_VAR_fqdn: ${{ vars.ZTL_FQDN }}
           TF_VAR_api_token: ${{ secrets.ZTL_API_TOKEN }}
 
